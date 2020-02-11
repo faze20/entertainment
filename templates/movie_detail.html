@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Movie Details {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <h2>{{ object.title }}</h2>
+    <div class="card" style="width:400px">
+        <a href=" {{ object.web_url }}">
+
+      <img class="card-img-top" src="{{ object.photo.url }}" alt="Card image" style="width:100%">
+          </a>
+
+      <div class="card-body">
+        <h4 class="card-title">Movie Ratings : {{ object.ratings }}</h4>
+        <p class="card-text">{{ object.storyline }}</p>
+        {% if user.is_superuser %}
+
+        <a href="{% url 'movie_edit' object.pk %}" class="btn btn-info" role="button"> Edit </a> |
+        <a href="{% url 'movie_delete' object.pk %}" class="btn btn-danger" role="button"> Delete </a> 
+        {% endif %}
+
+      </div>
+    </div>
+</div>
+<p> Back to <a href="{% url 'movie' %}">All Movies</a>.</p>
+
+{% endblock content %}

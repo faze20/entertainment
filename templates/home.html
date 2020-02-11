@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} Entertainment {% endblock title %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+  <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+  </iframe>
+  
+  {% if user.is_superuser %}
+  <div>
+  <a href="{% url 'new_movie' %}"> Manager's Section .</a>
+</div>
+  {% endif %}
+
+
+
+
+
+</body>
+</html>
+
+{% endblock content %}
