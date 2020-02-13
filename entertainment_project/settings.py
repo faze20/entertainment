@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     #3rd party apps
     'crispy_forms',
     
-    #local Apps
+    #local Applications 
     'movie_center.apps.MovieCenterConfig',
     'user.apps.UserConfig',
 ]
