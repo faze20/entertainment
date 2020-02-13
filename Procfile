@@ -1,0 +1,1 @@
+web: gunicorn entertainment_project.wsgi --log-file -
