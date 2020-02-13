@@ -31,13 +31,7 @@ class MovieManagerPage(models.Model):
     def get_absolute_url(self):
         return reverse('movie_detail',args=[str(self.id)])
 
-    
-
-
-
-
-
-# contact form module
+    # contact form module
 
 class ContactUs(models.Model):
     name = models.CharField(max_length=200)
